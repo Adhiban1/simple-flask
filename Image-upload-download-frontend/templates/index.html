@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #submit {
+            margin: 10px;
+            padding: 10px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            opacity: 0.7;
+        }
+
+        input[type=file]::file-selector-button {
+            margin-right: 20px;
+            border: none;
+            background: #084cdf;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            transition: background .2s ease-in-out;
+        }
+
+        input[type=file]::file-selector-button:hover {
+            background: #0d45a5;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload Form</title>
+</head>
+<body>
+    <h2>Image Upload Form</h2>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" accept="image/*" required>
+        <br>
+        <input id="submit" type="submit" value="Upload Image">
+    </form>
+</body>
+</html>
